@@ -11,13 +11,22 @@ package models;
  */
 public class AccountService {
     
-    public String user;
-    public String pass;
+    public String user1 = "abe";
+    public String user2 = "barb";
+    public String pass = "pass";
     
-    
-    public AccountService(String user,String pass){
-        this.user = user;
-        this.pass = pass;
+    public Boolean login(String username, String password){
+        
+        boolean auth = false;
+        if(username != null || username != "" || username.equalsIgnoreCase(user1) || username.equalsIgnoreCase(user2) ||
+           password != null || password != "" || password.equalsIgnoreCase(pass)){
+            auth = true;
+        }
+        
+        return auth;
+        
     }
+    
+  
           
 }

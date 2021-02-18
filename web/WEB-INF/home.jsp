@@ -12,10 +12,10 @@
         <title>Home</title>
     </head>
     <body>
-        <h1>Hello Page</h1>
+        <h1>Home</h1>
         
         <h2> Hello ${user}</h2>
-        <a href="/login">Log Out</a>
+        <a href="/login" name="logout">Log Out</a>
         
     </body>
 </html>
