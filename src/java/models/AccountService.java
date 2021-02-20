@@ -13,15 +13,21 @@ public class AccountService {
     
     public String user1 = "abe";
     public String user2 = "barb";
-    public String pass = "pass";
+    public String pass = "password";
     
     public Boolean login(String username, String password){
         
         boolean auth = false;
-        if(username != null || username != "" || username.equalsIgnoreCase(user1) || username.equalsIgnoreCase(user2) ||
-           password != null || password != "" || password.equalsIgnoreCase(pass)){
-            auth = true;
-        }
+//        if(username != null || username != "" || username.equalsIgnoreCase(user1) || username.equalsIgnoreCase(user2) &&
+//           password != null || password != "" || password.equalsIgnoreCase(pass)){
+//            auth = true;
+//        }
+          if(username.equalsIgnoreCase(user1) || username.equalsIgnoreCase(user2)){
+              if(password.equals(pass)){
+                 auth = true;  
+              } 
+
+          }
         
         return auth;
         
