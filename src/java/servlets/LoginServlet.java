@@ -62,12 +62,7 @@ public class LoginServlet extends HttpServlet {
             request.setAttribute("message", "Invalid Login");
             getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
         }
-        
-        
-        
-       
-        
-        
+         
     }
         
     }

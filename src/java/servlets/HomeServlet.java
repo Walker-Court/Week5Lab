@@ -26,6 +26,7 @@ public class HomeServlet extends HttpServlet {
         HttpSession session = request.getSession();
         
         if (session.getAttribute("username")!= null){
+            request.setAttribute("user",session.getAttribute("username"));
             getServletContext().getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
         }else {
             response.sendRedirect("login");
